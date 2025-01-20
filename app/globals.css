@@ -1,21 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Josefin+Sans:ital,wght@0,300;1,300&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --primary: 351 100% 86%;
+    --primary-foreground: 0 0% 30%;
   }
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+  }
+
+  .font-cursive {
+    font-family: 'Italianno', cursive;
+    font-weight: 400;
+    font-size: 48px;
+  }
+
+  .font-light-italic {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  .button-shadow {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-custom {
+    @apply bg-pink-100 text-gray-800 hover:bg-pink-200 rounded-full px-8 py-2 text-sm transition-all duration-200 ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-custom:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
 }
